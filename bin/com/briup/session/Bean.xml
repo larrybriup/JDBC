@@ -1,5 +1,0 @@
-<class name="com.briup.test.Person" table="preson">
-	<property name="id" col="id"></property>
-	<property name="name" col="name"></property>
-	<property name="age" col="age"></property>
-</class>
