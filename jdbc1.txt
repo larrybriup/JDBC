@@ -1,0 +1,49 @@
+
+                           JDBC
+1:sun公司推出的标准
+ 有两个层面:
+ 1驱动的开发
+ 1)jdbc-odbc桥
+ 2)native api(需要客户端)
+ 3)网络协议(需要中间件服务器)
+ 4)本地协议(tcp)
+
+ 2上层应用的开发
+ j2se java.sql.*;
+ j2ee javax.sql.*;
+
+ 1启动数据库
+ windows:
+  否则sqlplus连接不上
+  services.msc
+
+  unix:
+  su -oracle
+   sqlplus '/as sysdba'
+   startup 
+   exit
+   lsnrctl
+   start
+ ORACLE_SID
+ 2启动一个监听服务
+ create table person(
+ id number primary key,
+ name varchar2(200) not null,
+ age number 
+ );
+
+ create sequence person_id_sequence
+ increment by 1;
+
+ --start with 1;
+
+ person_id_sequence.nextval;
+ person_id_sequence.currval;
+
+ insert into person
+ values(3,'lizhang',22);
+
+ create table student(
+ mydate date
+ );
+2:

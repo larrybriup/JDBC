@@ -1,0 +1,44 @@
+hibernate 中的两种文件:
+ 1配置文件hibernate.cfg.xml
+	文件包括:
+	1)连接数据库的相关信息
+	2)hibernate框架本身的一些属性设置
+	3)对实体类进行映射的映射文件的路径
+  这个文件的名字默认叫hibernate.cfg.xml,默认存放的位置就是src下面下,会自动读取
+  src下面的一个叫hibernate.cfg.xml的文件,如果修改文件的名字和路径,需要把新的路径和名字传给hibernate才行
+
+ 2映射文件xxx.hbm.xml
+	作用:对实体类进行映射
+	其实就是描述类和数据库表之间的映射关系
+	<id>标签对主键映射的描述
+	<property>标签对其他属性映射的描述
+一般会叫xxx.hbm.xml,xxx就是多要映射的那个类的名字,这个文件的位置一般会放在和文件多映射的类相同的位置
+
+org.hibernate.cfg.Configuration类
+作用:
+	1读取配置文件hibernate.cfg.xml
+	2创建SessionFactory对象
+org.hibernate.SessionFactory接口
+作用:
+	产生Session接口的实现类对象
+
+	只有Configuration类读取了正确配置的hibernate.cfg.xml文件后,才能创建出SessionFactory接口的实现类对象
+
+	SessionFactory接口的实现类对象,在一个使用hibernate框架的中,只需要有一个这样的对象就可以
+
+org.hibernate.Session接口
+作用:
+	完成代码和数据库之间的交互.
+
+	在hibernate中,如果没有session对象,那么任何数据库的操作都做不了.
+org.hibernate.Transaction接口
+作用:
+	一个Transaction类型对象代表着一个事务,
+
+	在使用Transaction之前要先开启一个事务,
+
+hibernate中把实体类分为三种:
+	transient 自由状态/瞬态
+	detached  游离状态/脱管状态
+	persistent 持久化状态
+
