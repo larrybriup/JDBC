@@ -12,22 +12,26 @@ import com.briup.common.ConnectionFactory;
 
 public class StatementTest {
 
-	private String driver = "oracle.jdbc.driver.OracleDriver";
-	private String url = "jdbc:oracle:thin:@localhost:1521:XE";
-	private String username = "king";
-	private String password = "king999";
+//	private String driver = "oracle.jdbc.driver.OracleDriver";
+//	private String url = "jdbc:oracle:thin:@localhost:1521:XE";
+//	private String username = "king";
+//	private String password = "king999";
+	private String driver = "com.mysql.jdbc.Driver";
+	private String url = "jdbc:mysql://localhost:3306/test";
+	private String username = "test";
+	private String password = "test";
 
 	public static void main(String[] args) {
 		StatementTest st = new StatementTest();
-		Person p = new Person(2, "cho", 23);
+		Person p = new Person(3, "Larry", 25);
 		List<Person> list = st.queryAll();
 		for (Person person : list) {
 			System.out.println(person);
 		}
 
-		 st.insert(p);
-		// st.delete(2);
-		// st.update(p);
+//		 st.insert(p);
+//		 st.delete(2);
+		 st.update(p);
 	}
 
 	public void insert(Person p) {

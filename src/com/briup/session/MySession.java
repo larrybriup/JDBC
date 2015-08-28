@@ -116,7 +116,7 @@ public class MySession {
 	private String createSql() {
 		String s1 = "";
 		String s2 = "";
-		int index = 0;
+		int index = 1;
 		for (String col : map.values()) {
 			s1 += col + ",";
 			s2 += "?,";

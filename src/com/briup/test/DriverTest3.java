@@ -13,7 +13,7 @@ public static void main(String[] args) {
 	try {
 //		-Djdbc.drivers="oracle.jdbc.driver.OracleDriver";
 //		System.setProperty("jdbc.drivers", driver);
-		Class.forName(driver);
+		Class.forName(driver).newInstance();
 		Connection conn = 
 			DriverManager.getConnection(url,username,password);
 		

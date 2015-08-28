@@ -2,7 +2,7 @@ package com.briup.session;
 
 import com.briup.test.Person;
 
-public class Test {
+public class TestMySession {
 	public static void main(String[] args) {
 		try {
 			MySession session = new MySession();

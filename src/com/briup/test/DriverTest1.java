@@ -9,20 +9,31 @@ public class DriverTest1 {
 
 		// driver标明要连接的是哪一种数据库dbms
 		// 驱动类的全包名加类名
-		String driver = "oracle.jdbc.driver.OracleDriver";
+//		String driver = "oracle.jdbc.driver.OracleDriver";
+//
+//		// 标明要连接的是哪一个数据库实例(地址)
+//		String url = "jdbc:oracle:thin:@localhost:1521:XE";
+//
+//		//
+//		String username = "king";
+//
+//		//
+//		String password = "king999";
+		String driver = "com.mysql.jdbc.Driver";
 
 		// 标明要连接的是哪一个数据库实例(地址)
-		String url = "jdbc:oracle:thin:@localhost:1521:XE";
+		String url = "jdbc:mysql://localhost:3306/test";
 
 		//
-		String username = "king";
+		String username = "test";
 
 		//
-		String password = "king999";
+		String password = "test";
 
 		try {
+			
 			// 1注册驱动
-			Class.forName(driver);
+			Class.forName(driver).newInstance();
 			// 2获得数据库连接对象Connection
 			Connection conn = DriverManager.getConnection(url, username,
 					password);

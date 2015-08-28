@@ -24,14 +24,14 @@ public class ConnectionFactory {
 		try {
 			Properties p = new Properties();
 //			p.load(new FileInputStream(new File(
-//					"src/com/briup/common/oracle.properties")));
+//					"src/com/briup/common/db.properties")));
 			
 			p.load(ConnectionFactory.class.
-					getResourceAsStream("oracle.properties"));
+					getResourceAsStream("db.properties"));
 			
 //			p.load(ConnectionFactory.class.
 //					getClassLoader().getResourceAsStream(
-//							"src/com/briup/common/oracle.properties"));
+//							"src/com/briup/common/db.properties"));
 			
 		
 			driver=p.getProperty("driver");

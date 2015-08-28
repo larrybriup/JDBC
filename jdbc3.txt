@@ -14,13 +14,13 @@ Book
 	o discription
 Order
 	#id
-	#c_id	¶à¶ÔÒ»		ÁªºÏÖ÷¼ü,Í¬Ê±Ò»¸öÖ÷¼üÓÖÊÇÍâ¼ü
+	#c_id	å¤šå¯¹ä¸€		è”åˆä¸»é”®,åŒæ—¶ä¸€ä¸ªä¸»é”®åˆæ˜¯å¤–é”®
 Item
 	#id	
-	#o_id	¶à¶ÔÒ»
-	#c_id	¶à¶ÔÒ»
-	f*b_id	Ò»¶ÔÒ»
+	#o_id	å¤šå¯¹ä¸€
+	#c_id	å¤šå¯¹ä¸€
+	f*b_id	ä¸€å¯¹ä¸€
 	
 	
 
-ÙøÕþ,ÀîÊÀÃñ,Ê®ËÄ±´ÀÕ,ÁÖ±ë,±¡ÎõÀ´...Õâ¾ÍÊÇÒ»¸öforÑ­»·
+å¬´æ”¿,æŽä¸–æ°‘,åå››è´å‹’,æž—å½ª,è–„ç†™æ¥...è¿™å°±æ˜¯ä¸€ä¸ªforå¾ªçŽ¯

@@ -19,21 +19,21 @@ public class PreparedStatementTest {
 
 	public static void main(String[] args) {
 		PreparedStatementTest pst = new PreparedStatementTest();
-//		List<Person> list = new ArrayList<Person>();
-//
-//		Person p = null;
-//		for (int i = 0; i < 2000; i++) {
-//			p = new Person(i, "cho", 20);
-//			list.add(p);
-//			// pst.insert(p);
-//		}
-//		long start = System.currentTimeMillis();
+		List<Person> list = new ArrayList<Person>();
+
+		Person p = null;
+		for (int i = 0; i < 2000; i++) {
+			p = new Person(i, "cho", 20);
+			list.add(p);
+			// pst.insert(p);
+		}
+		long start = System.currentTimeMillis();
 //		pst.insertListForPS(list);// 261
-//		// pst.insertListForStmt(list);//1978
-//		long end = System.currentTimeMillis();
-//		System.out.println(end - start);
+		 pst.insertListForStmt(list);//1978
+		long end = System.currentTimeMillis();
+		System.out.println(end - start);
 		
-		pst.psForDate();
+//		pst.psForDate();
 //		pst.stmtForDate();
 
 	}
@@ -53,6 +53,7 @@ public void stmtForDate(){
 		
 		
 	} catch (Exception e) {
+		e.printStackTrace();
 	}finally {
 		try {
 			ConnectionFactory.close(stmt, conn);
@@ -137,6 +138,7 @@ public void psForDate() {
 					i = 0;
 				}
 			}
+			// 处理剩下的
 			ps.executeBatch();
 			// 手动提交
 			// conn.commit();

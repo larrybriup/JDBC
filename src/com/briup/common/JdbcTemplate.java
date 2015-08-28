@@ -38,7 +38,6 @@ public class JdbcTemplate {
 
 		ConnectionFactory.close(stmt, conn);
 		return o;
-
 	}
 
 	public void executeWithPS(String sql, SetValueHelperForPS helper, Object o)
@@ -47,15 +46,6 @@ public class JdbcTemplate {
 		helper.setValue(ps, o);
 		ps.execute();
 		ConnectionFactory.close(ps, conn);
-
-	}
-
-	public Connection getConn() {
-		return conn;
-	}
-
-	public void setConn(Connection conn) {
-		this.conn = conn;
 	}
 
 }
